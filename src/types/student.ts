@@ -11,4 +11,9 @@ export interface Student {
     addition: string,
     addition1: string,
     addition2: string,
+
+    kcpe: boolean,
+    kcse: boolean,
+    birthcert: boolean,
+    appform: boolean,
 }

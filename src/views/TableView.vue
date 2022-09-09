@@ -9,7 +9,7 @@
   <div>
     <div class="overflow-x-auto">
       <div class="w-full text-right">
-            <router-link :to="{ path: '/addfile' }"><button class="btn btn-md btn-primary">+ Add File</button></router-link>
+            <router-link :to="{ path: '/addfile'}"><button class="btn btn-md btn-primary">+ Add File</button></router-link>
         </div>
       <table class="table  w-full">
         <thead>
@@ -25,21 +25,21 @@
           </tr>
         </thead>
         <tbody>
-          <router-link :to="{ path: '/student' }">             
+          <router-link :to="{ path: '/student' } + student.id + '/show'">             
            <tr v-for="(student,index) in students" :key="student.id">              
-            <td>{{index +1}}</td>
-            <td class="uppercase">{{ student.id }}</td>
-            <td>{{ student.Lastname }}</td>
-            <td>{{ student.Firstname }}</td>
-            <td>{{ student.Middlename }}</td>
-            <td>{{student.school}}</td>
-            <td class="text-green-500">Present</td>
-            <td class="flex gap-1">
-              <button class="btn btn-xs btn-secondary">retrive</button>
-              <button class="btn btn-xs btn-success">Return</button>
-              <button class="btn btn-xs btn-primary">History</button>
-            </td>          
-          </tr>
+              <td>{{index +1}}</td>
+              <td class="uppercase">{{ student.id }}</td>
+              <td>{{ student.Lastname }}</td>
+              <td>{{ student.Firstname }}</td>
+              <td>{{ student.Middlename }}</td>
+              <td>{{student.school}}</td>
+              <td class="text-green-500">Present</td>
+              <td class="flex gap-1">
+                <button class="btn btn-xs btn-secondary">retrive</button>
+                <button class="btn btn-xs btn-success">Return</button>
+                <button class="btn btn-xs btn-primary">History</button>
+              </td>          
+            </tr>
           </router-link>
         </tbody>
         <tfoot>

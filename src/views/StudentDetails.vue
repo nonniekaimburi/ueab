@@ -27,6 +27,12 @@
       </form>
     </div>
 
-    <router-link :to="{ path: '/tableview' }"> <button class="btn btn-md btn-primary py-2 px-4 rounded-full"> Button </button> </router-link>
+    <div>
+      <form>
+        <div>KCPE: {{ student.kcpe }}</div>
+      </form>
+    </div>
+
+    <router-link :to="{ path: '/tableview' }"> <button class="btn btn-md btn-primary py-2 px-4 rounded-full"> Back </button> </router-link>
 
 </template>

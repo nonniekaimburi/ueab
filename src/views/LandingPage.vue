@@ -1,4 +1,7 @@
 <template>
+    <div 
+    class="w-full h-full bg-no-repeat bg-cover"
+    style=" background-image: url('../assets/image1.jpeg');">
     <div class="flex ">
         <div class="w-full">
             <ul>
@@ -11,7 +14,7 @@
             <router-link :to="{ path: '/addfile' }"><button class="btn btn-md btn-primary">+ Add File</button></router-link>
         </div>
     </div>
-    
+  </div>  
 </template>
 <script  setup lang="ts">
 import LandingButtons from '../components/LandingButtons.vue';
