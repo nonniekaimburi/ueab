@@ -35,20 +35,24 @@ onAuthStateChanged(auth, user => {
 const signOut = () => auth.signOut();
 </script>
 
-<template style="background-image: url(../images/image1.jpeg)">
-  <pre v-if="isAuthenticated">User Object{{ user }}
-  <div>
-    <button @click="signOut" class="btn btn-error">Sign Out</button>
-  </div>
-  </pre>
-  <div v-else class=" min-h-screen flex justify-center items-center text-center ">
-    <div>
-      <p class="font-bold text-xl md:text-4xl mx-4">Welcome to UEAB</p>
-      <p class="mb-8">This is UEAB File System.</p>
-      <li @click="signIn" class="btn btn-primary">
-        Log In to get started.
-      </li>
-    </div>
-  </div>
+<template >
+  <div 
+    class="w-full h-full bg-no-repeat bg-cover bg-fixed " 
+    style="background-image: url('../assets/image2.jpg');">
 
+    <pre v-if="isAuthenticated">User Object{{ user }}
+    <div>
+      <button @click="signOut" class="btn btn-error">Sign Out</button>
+    </div>
+    </pre>
+    <div v-else class=" min-h-screen flex justify-center items-center text-center ">
+      <div>
+        <p class="font-bold text-xl md:text-4xl mx-4">Welcome to UEAB</p>
+        <p class="mb-8">This is UEAB File System.</p>
+        <li @click="signIn" class="btn btn-primary">
+          Log In to get started.
+        </li>
+      </div>
+    </div>
+</div>
 </template>

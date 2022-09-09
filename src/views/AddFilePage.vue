@@ -25,28 +25,24 @@
      <div>
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <b>Which of the Following forms are present?</b><br>
+          <input type="checkbox" id="kcse" value="kcse" v-model="student.kcse">
+          <label for="kcse"> KCSE</label> <br><br>
+          <input type="checkbox" id="kcpe" value="kcpe" v-model="student.kcpe">
+          <label for="kcpe"> KCPE</label> <br><br>
+          <input type="checkbox" id="appform" value="appform" v-model="student.appform">
+          <label for="appform"> Application Form</label> <br><br>
+          <input type="checkbox" id="birthcert" value="birthcert" v-model="student.birthcert">
+          <label for="birthcert"> Birth Certificate</label> <br><br>
 
-          <label for="radio1"> 
-            <input type="radio" class="appearance-none checked:bg-gray-900 checked:border-transparent ...">  KCSE
-          </label><br>
-          <label for="radio1"> 
-            <input type="radio" class="appearance-none checked:bg-gray-900 checked:border-transparent ...">  KCPE
-          </label><br>
-          <label for="radio1"> 
-            <input type="radio" class="appearance-none checked:bg-gray-900 checked:border-transparent ...">  Application Form
-          </label><br>
-          <label for="radio1">
-            <input type="radio" class="appearance-none checked:bg-gray-900 checked:border-transparent ...">   Birth Certificate
-          </label><br><br>
           <div>
             <input type="text" v-model="student.addition" class="rounded" placeholder="Enter Additional Forms present"><br><br>
             <input type="text" v-model="student.addition1" class="rounded" placeholder="Enter Additional Forms present"><br><br>
             <input type="text" v-model="student.addition2" class="rounded" placeholder="Enter Additional Forms present"><br><br>
           </div>
         </form>
-     </div>       
-     <router-link :to="{ path: '/tableview' }"><div @click="addStudent" class="transform motion-safe:hover:-translate-y-1 motion-safe:hover:scale-110 transition ease-in-out duration-300 text-primary font-bold btn btn-ghost rounded-full"></div>Add this file</router-link>
-
+     </div>     
+     <router-link :to="{ path: '/tableview' }"><button @click="addStudent" class="btn btn-md btn-primary">Add this File</button></router-link>  
+   
 </template>
 <script setup lang="ts">
     import{getStudents} from "../firebaseFuctions/getStudents"
