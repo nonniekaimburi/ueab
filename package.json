@@ -1,0 +1,28 @@
+{
+  "name": "ueab-file",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.6",
+    "@vue-hero-icons/outline": "^1.7.2",
+    "@vueuse/core": "^9.1.1",
+    "@vueuse/firebase": "^9.1.1",
+    "daisyui": "^2.18.1",
+    "firebase": "^9.9.3",
+    "pinia": "^2.0.14",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.5",
+    "vite": "^2.9.12"
+  }
+}
