@@ -38,7 +38,7 @@ const signOut = () => auth.signOut();
 <template >
   <div 
     class="w-full h-full bg-no-repeat bg-cover bg-fixed " 
-    style="background-image: url('../assets/image2.jpg');">
+    style="background-image: url('https://cdn.pixabay.com/vimeo/487508532/Woman%20-%2058142.mp4?rendition=source&expiry=1662734798&hash=3dd44580b14e71c339d9cb56fa5995ec900f881e');">
 
     <pre v-if="isAuthenticated">User Object{{ user }}
     <div>

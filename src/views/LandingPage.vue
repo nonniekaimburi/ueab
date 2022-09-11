@@ -1,7 +1,8 @@
 <template>
     <div 
     class="w-full h-full bg-no-repeat bg-cover"
-    style=" background-image: url('../assets/image1.jpeg');">
+    style="background-image: url('');">
+   
     <div class="flex ">
         <div class="w-full">
             <ul>

@@ -43,8 +43,7 @@
           </router-link>
         </tbody>
         <tfoot>
-
-
+          
         </tfoot>
       </table>
     </div>
