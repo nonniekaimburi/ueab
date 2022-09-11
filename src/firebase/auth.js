@@ -14,7 +14,7 @@ export  function firbaseGoogleAuth(){
     const signIn = async () => {
       signInWithPopup(auth, provider).then(result => {
         user.value = result.user;
-        router.push('/')
+        router.push('/landing')
       }).catch(error => {
         errorCode.value = error.code;
       });
@@ -23,9 +23,18 @@ export  function firbaseGoogleAuth(){
       if (adminUser) {
         isLoggedIn.value = true;
         user.value = adminUser;
+        this.$router.push({ name: 'landing', query: { redirect: '/landing' } });
+      
       } else {
         isLoggedIn.value = false;
         user.value = null;
+      }
+    });
+//block non ueab emails  
+    exports.SignIn = functions.auth.user().SignIn((user, context) => {
+      if (!user.email || user.email.indexOf('@ueab.ac.ke') === -1) {
+        throw new functions.auth.HttpsError(
+          'invalid-argument', `Unauthorized email "${user.email}"`);
       }
     });
   

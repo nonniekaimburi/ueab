@@ -11,7 +11,7 @@
       <div class="w-full text-right">
             <router-link :to="{ path: '/addfile'}"><button class="btn btn-md btn-primary">+ Add File</button></router-link>
         </div>
-      <table class="table  w-full">
+      <table class="table">
         <thead>
           <tr>
             <th>No</th>
@@ -24,6 +24,7 @@
             <th>Action</th>
           </tr>
         </thead>
+        
         <tbody>
           <router-link :to="{ path: '/student' } + student.id + '/show'">             
            <tr v-for="(student,index) in students" :key="student.id">              
